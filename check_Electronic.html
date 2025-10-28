@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบฟอร์มตรวจเช็คระบบไฟฟ้า</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff6600;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    form {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select, input[type="text"], input[type="file"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #cc5200;
+    }
+  </style>
+</head>
+<body>
+  <h1>IT Maintenance<br>PROFESSIONAL ELECTRICIAN</h1>
+  <form id="inspectionForm">
+    <label for="location">สถานที่</label>
+    <select name="location" id="location">
+      <option value="">-- เลือกสถานที่ --</option>
+      <option value="1.บ้านพักพนักงาน">1.บ้านพักพนักงาน</option>
+<option value="2.เสาทางเข้าโรงงาน">2.เสาทางเข้าโรงงาน</option>
+<option value="3.ตู้ CCTV โรงรถ">3.ตู้ CCTV โรงรถ</option>
+<option value="4.ตู้ CCTV ข้างป้อมรปภ.2">4.ตู้ CCTV ข้างป้อมรปภ.2</option>
+<option value="5.ข้างในป้อมรปภ.2">5.ข้างในป้อมรปภ.2</option>
+<option value="6.ตู้ CCTV หมักส่าฝั่งทางเข้าโรงงาน">6.ตู้ CCTV หมักส่าฝั่งทางเข้าโรงงาน</option>
+<option value="7.ตู้ CCTV ฝั่งติดกลั่น">7.ตู้ CCTV ฝั่งติดกลั่น</option>
+<option value="8.ตู้ CCTV Ro">8.ตู้ CCTV Ro</option>
+<option value="9.ตู้ CCTV กลั่น">9.ตู้ CCTV กลั่น</option>
+<option value="10.แพลนปรับสภาพน้ำ">10.แพลนปรับสภาพน้ำ</option>
+<option value="11.ต้นกำลัง">11.ต้นกำลัง</option>
+<option value="12.CCTV Server room">12.CCTV Server room</option>
+<option value="13.CCTV ห้องหัวหน้าบรรจุ">13.CCTV ห้องหัวหน้าบรรจุ</option>
+<option value="14.CCTV ตู้หน้าลิฟฟ์บรรจุ">14.CCTV ตู้หน้าลิฟฟ์บรรจุ</option>
+<option value="15.ท่าน้ำปรับสภาพน้ำ">15.ท่าน้ำปรับสภาพน้ำ</option>
+<option value="16.ท่าน้ำตรงตู้ไฟใหญ่">16.ท่าน้ำตรงตู้ไฟใหญ่</option>
+<option value="17.TBL ตู้ CCTV">17.TBL ตู้ CCTV</option>
+<option value="18.สิ่งแวดล้อมตู้หน้าแผนก">18.สิ่งแวดล้อมตู้หน้าแผนก</option>
+<option value="19.ตู้อาคารพักขยะ">19.ตู้อาคารพักขยะ</option>
+<option value="20.สิ่งแวดล้อมตู้กลางบ่อ">20.สิ่งแวดล้อมตู้กลางบ่อ</option>
+<option value="21.ปรุงสุราอาคาร 1">21.ปรุงสุราอาคาร 1</option>
+<option value="22.ปรุงสุราอาคาร 2">22.ปรุงสุราอาคาร 2</option>
+<option value="23.โรงบรมบริเวณหัวโค้งไปศาล">23.โรงบรมบริเวณหัวโค้งไปศาล</option>
+<option value="24.โรงบรมบริเวณหัวโค้งไปศาล2(ป้อมยาม)">24.โรงบรมบริเวณหัวโค้งไปศาล2(ป้อมยาม)</option>
+<option value="25.HOM internet">25.HOM internet</option>
+<option value="26.พัสดุ internet">26.พัสดุ internet</option>
+<option value="27.โรงงานอาหาร  internet">27.โรงงานอาหาร  internet</option>
+<option value="28.ซ่อมบำรุง  internet">28.ซ่อมบำรุง  internet</option>
+<option value="29.อาคารวิทยาศาสตร์  internet">29.อาคารวิทยาศาสตร์  internet</option>
+<option value="30.บรรจุ  internet">30.บรรจุ  internet</option>
+<option value="31.Serverroom  internet">31.Serverroom  internet</option>
+<option value="32.กลั่น  internet">32.กลั่น  internet</option>
+<option value="33.บักพักเรืองรับรอง  internet">33.บักพักเรืองรับรอง  internet</option>
+<option value="34.HOM เครื่องเสียงชั่น 2">34.HOM เครื่องเสียงชั่น 2</option>
+<option value="35.HOM เครื่องเสียงชั่น 1">35.HOM เครื่องเสียงชั่น 1</option>
+<option value="36.ตึกอำนวยการ ประชุม1 เครื่องเสียง ">36.ตึกอำนวยการ ประชุม1 เครื่องเสียง </option>
+<option value="37.ตึกอำนวยการ ประชุม4 เครือ่งเสียง ">37.ตึกอำนวยการ ประชุม4 เครือ่งเสียง </option>
+    </select>
+
+    <label for="day">วัน</label>
+    <select name="day" id="day">
+      <option value="">--เลือกวัน--</option>
+      <option value="จันทร์">จันทร์</option>
+      <option value="อังคาร">อังคาร</option>
+      <option value="พุธ">พุธ</option>
+      <option value="พฤหัสบดี">พฤหัสบดี</option>
+      <option value="ศุกร์">ศุกร์</option>
+      <option value="เสาร์">เสาร์</option>
+      <option value="อาทิตย์">อาทิตย์</option>
+    </select>
+
+    <label for="date">วันที่</label>
+    <select name="date" id="date">
+      <option value="">--วันที่--</option>
+      <option value="">1</option>
+      <option value="">2</option>
+      <option value="">3</option>
+      <option value="">4</option>
+      <option value="">5</option>
+      <option value="">6</option>
+      <option value="">7</option>
+      <option value="">8</option>
+      <option value="">9</option>
+      <option value="">10</option>
+      <option value="">11</option>
+      <option value="">12</option>
+      <option value="">13</option>
+      <option value="">14</option>
+      <option value="">15</option>
+      <option value="">16</option>
+      <option value="">17</option>
+      <option value="">18</option>
+      <option value="">19</option>
+      <option value="">20</option>
+      <option value="">21</option>
+      <option value="">22</option>
+      <option value="">23</option>
+      <option value="">24</option>
+      <option value="">25</option>
+      <option value="">26</option>
+      <option value="">27</option>
+      <option value="">28</option>
+      <option value="">29</option>
+      <option value="">30</option>
+      <option value="">31</option>
+    </select>
+
+    <label for="month">เดือน</label>
+    <select name="month" id="month">
+      <option value="">-- เลือกเดือน --</option>
+      <option value="มกราคม">มกราคม</option>
+      <option value="กุมภาพันธ์">กุมภาพันธ์</option>
+      <option value="มีนาคม">มีนาคม</option>
+      <option value="เมษายน">เมษายน</option>
+      <option value="พฤษภาคม">พฤษภาคม</option>
+      <option value="มิถุนายน">มิถุนายน</option>
+      <option value="กรกฎาคม">กรกฎาคม</option>
+      <option value="สิงหาคม">สิงหาคม</option>
+      <option value="กันยายน">กันยายน</option>
+      <option value="ตุลาคม">ตุลาคม</option>
+      <option value="พฤศจิกายน">พฤศจิกายน</option>
+      <option value="ธันวาคม">ธันวาคม</option>
+    </select>
+
+    <label for="methodSelect">วิธีการตรวจ + อุปกรณ์ที่ใช้</label>
+    <select name="methodSelect" id="methodSelect">
+      <option value="">--วิธีการตรวจ + อุปกรณ์ที่ใช้--</option>
+      <option value="ตรวจเช็คทางกายภาพ + Infrared Thermometer">ตรวจเช็คทางกายภาพ + Infrared Thermometer</option>
+      <option value="ตรวจเช็คทางกายภาพ">ตรวจเช็คทางกายภาพ</option>
+      <option value="อื่นๆ">อื่นๆ</option>
+    </select>
+    <input type="text" name="method" placeholder="ระบุเพิ่มเติม">
+
+    <label for="resultSelect">ผลการตรวจสายไฟ</label>
+    <select name="resultSelect" id="resultSelect">
+      <option value="">--เลือกผลการตรวจ--</option>
+      <option value="สายปกติ">สายปกติ</option>
+      <option value="สายผิดปกติ">สายผิดปกติ</option>
+    </select>
+    <input type="text" name="result" placeholder="ระบุเพิ่มเติม">
+
+    <label for="wireTempSelect">อุณหภูมิสาย (°C)</label>
+    <select name="wireTempSelect" id="wireTempSelect">
+      <option value="">--เลือกอุณหภูมิ--</option>
+      <option value="ปกติ">ปกติ</option>
+      <option value="ร้อน">ร้อน</option>
+      <option value="ร้อนมาก">ร้อนมาก</option>
+      <option value="เย็น">เย็น</option>
+    </select>
+    <input type="text" name="wire_temp" placeholder="ระบุเพิ่มเติม">
+
+    <label for="peripheralSelect">อุปกรณ์ต่อพ่วง,ปลั๊กไฟ</label>
+    <select name="peripheralSelect" id="peripheralSelect">
+      <option value="">--เลือกคุณภาพอุปกรณ์ต่อพ่วง--</option>
+      <option value="ได้มาตรฐาน">ได้มาตรฐาน</option>
+      <option value="ไม่ได้มาตรฐาน">ไม่ได้มาตรฐาน</option>
+      <option value="ควรเปลียน">ควรเปลียน</option>
+    </select>
+    <input type="text" name="peripheral" placeholder="ระบุเพิ่มเติม">
+
+    <label for="peripheral_temp">อุณหภูมิอุปกรณ์ต่อพ่วง(°C)</label>
+    <input type="text" name="peripheral_temp">
+
+    <label for="recommendation">คำแนะนำ</label>
+    <input type="text" name="recommendation">
+
+    <label for="ups_result_select">ผลการตรวจ UPS</label>
+    <select name="ups_result_select" id="ups_result_select">
+      <option value="">--เลือก--</option>
+      <option value="มี,ใช้งานได้">มี,ใช้งานได้</option>
+      <option value="มี,เสีย">มี,เสีย</option>
+      <option value="ไม่มี">ไม่มี</option>
+      <option value="คำเเนะนำ,หมายเหตุ">คำเเนะนำ,หมายเหตุ</option>
+    </select>
+    <input type="text" name="ups_result" placeholder="ระบุเพิ่มเติม">
+
+    <label for="inspection_photos">รูปถ่ายการตรวจ:</label>
+    <input type="file" name="inspection_photos[]" accept="image/*" multiple>
+
+    <label for="speedtest_photo">Speedtest Internet</label>
+    <input type="file" name="speedtest_photo[]" accept="image/*" multiple>
+
+    <label for="status_select">Status</label>
+    <select name="status_select" id="status_select">
+      <option value="">--สถานะการตรวจเช็ค--</option>
+      <option value="ตรวจแล้ว">ตรวจแล้ว</option>
+      <option value="ยังไม่มีการตรวจเช็ค">ยังไม่มีการตรวจเช็ค</option>
+    </select>
+    <input type="text" name="status" placeholder="ระบุเพิ่มเติม">
+
+    <button type="submit">บันทึกข้อมูล</button>
+  </form>
+
+  <script>
+    document.getElementById('inspectionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = {
+        location: document.getElementById('location').value,
+        day: document.getElementById('day').value,
+        date: document.getElementById('date').value,
+        month: document.getElementById('month').value,
+        methodSelect: document.getElementById('methodSelect').value,
+        method: document.querySelector('input[name="method"]').value,
+        resultSelect: document.getElementById('resultSelect').value,
+        result: document.querySelector('input[name="result"]').value,
+        wireTempSelect: document.getElementById('wireTempSelect').value,
+        wire_temp: document.querySelector('input[name="wire_temp"]').value,
+        peripheralSelect: document.getElementById('peripheralSelect').value,
+        peripheral: document.querySelector('input[name="peripheral"]').value,
+        peripheral_temp: document.querySelector('input[name="peripheral_temp"]').value,
+        recommendation: document.querySelector('input[name="recommendation"]').value,
+        ups_result_select: document.getElementById('ups_result_select').value,
+        ups_result: document.querySelector('input[name="ups_result"]').value,
+        status_select: document.getElementById('status_select').value,
+        status: document.querySelector('input[name="status"]').value,
+        timestamp: new Date().toISOString()
+      };
+      localStorage.setItem('inspectionData', JSON.stringify(data));
+      alert("บันทึกข้อมูลเรียบร้อยแล้ว!");
+    });
+  </script>
+</body>
+</html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>บันทึกการซื้อของ</title>
+</head>
+<body>
+  <h2>กรอกข้อมูลสิ่งของ</h2>
+  <form id="itemForm">
+    <label>ชื่อสิ่งของ: <input type="text" id="itemName" required></label><br><br>
+    <label>วันที่ซื้อ: <input type="date" id="purchaseDate" required></label><br><br>
+    <button type="submit">คำนวณ</button>
+  </form>
+  <div id="result" style="margin-top: 20px;"></div>
+
+  <script>
+    document.getElementById("itemForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const itemName = document.getElementById("itemName").value;
+      const purchaseDateStr = document.getElementById("purchaseDate").value;
+      const purchaseDate = new Date(purchaseDateStr);
+      const now = new Date();
+
+      if (isNaN(purchaseDate)) {
+        document.getElementById("result").innerHTML = "<p style='color:red;'>กรุณาเลือกวันที่ซื้อ</p>";
+        return;
+      }
+
+      let years = now.getFullYear() - purchaseDate.getFullYear();
+      let months = now.getMonth() - purchaseDate.getMonth();
+      let days = now.getDate() - purchaseDate.getDate();
+
+      if (days < 0) {
+        months -= 1;
+        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+        days += prevMonth.getDate();
+      }
+
+      if (months < 0) {
+        years -= 1;
+        months += 12;
+      }
+
+      document.getElementById("result").innerHTML = `
+        <p><strong>สิ่งของ:</strong> ${itemName}</p>
+        <p><strong>ซื้อมาแล้ว:</strong> ${years} ปี ${months} เดือน ${days} วัน</p>
+      `;
+    });
+  </script>
+
+  <head>
+  <meta charset="UTF-8">
+  <title>แดชบอร์ดแผนการตรวจสายไฟ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .table-container {
+      overflow-x: auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      padding: 10px;
+    }
+    table {
+      border-collapse: collapse;
+      font-size: 12px;
+      min-width: 900px;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 8px;
+      text-align: center;
+      white-space: nowrap;
+    }
+    th {
+      background-color: #f0f0f0;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .checked {
+      background-color: #c8f7c5;
+      font-weight: bold;
+      color: #2b8a3e;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>แดชบอร์ดแผนการตรวจสายไฟ</h2>
+  <div class="table-container">
+    <table id="inspectionTable">
+      <!-- ตารางจะถูกสร้างโดย JavaScript -->
+    </table>
+  </div>
+
+  <script>
+    async function loadData() {
+      const response = await fetch('inspection_plan.json');
+      const data = await response.json();
+
+      // ดึงชื่อเดือนทั้งหมดจากข้อมูล
+      const months = [
+        'มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน',
+         'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม',
+          'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'
+];
+      const weeks = [1, 2, 3, 4];
+
+      let html = '<thead><tr><th rowspan="2">สถานที่</th>';
+
+      // แถวที่ 1: เดือน (รวม 4 คอลัมน์ของแต่ละเดือน)
+      months.forEach(month => {
+        html += `<th colspan="4">${month}</th>`;
+      });
+      html += '</tr><tr>';
+
+      // แถวที่ 2: สัปดาห์
+      months.forEach(() => {
+        weeks.forEach(week => {
+          html += `<th>สัปดาห์ ${week}</th>`;
+        });
+      });
+      html += '</tr></thead><tbody>';
+
+      // ข้อมูลแต่ละแถว
+      data.forEach(item => {
+        html += `<tr><td>${item.location}</td>`;
+        months.forEach(month => {
+          weeks.forEach(week => {
+            const cell = item.inspections.find(i => i.month === month && i.week === week);
+            const status = cell ? cell.status : '';
+            const isChecked = status === '✓' || status.toLowerCase() === 'x';
+            html += `<td class="${isChecked ? 'checked' : ''}">${status}</td>`;
+          });
+        });
+        html += '</tr>';
+      });
+
+      html += '</tbody>';
+      document.getElementById('inspectionTable').innerHTML = html;
+    }
+
+    loadData();
+  </script>
+
+</body>
+</html>
