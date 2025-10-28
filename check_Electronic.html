@@ -56,7 +56,7 @@
   <h1>IT Maintenance<br>PROFESSIONAL ELECTRICIAN</h1>
   <form id="inspectionForm">
     <label for="location">สถานที่</label>
-    <select name="location" id="location">
+    <select id="location" name="location">
       <option value="">-- เลือกสถานที่ --</option>
       <option value="1.บ้านพักพนักงาน">1.บ้านพักพนักงาน</option>
 <option value="2.เสาทางเข้าโรงงาน">2.เสาทางเข้าโรงงาน</option>
@@ -98,7 +98,7 @@
     </select>
 
     <label for="day">วัน</label>
-    <select name="day" id="day">
+    <select id="day" name="day">
       <option value="">--เลือกวัน--</option>
       <option value="จันทร์">จันทร์</option>
       <option value="อังคาร">อังคาร</option>
@@ -109,85 +109,36 @@
       <option value="อาทิตย์">อาทิตย์</option>
     </select>
 
-    <label for="date">วันที่</label>
-    <select name="date" id="date">
-      <option value="">--วันที่--</option>
-      <option value="">1</option>
-      <option value="">2</option>
-      <option value="">3</option>
-      <option value="">4</option>
-      <option value="">5</option>
-      <option value="">6</option>
-      <option value="">7</option>
-      <option value="">8</option>
-      <option value="">9</option>
-      <option value="">10</option>
-      <option value="">11</option>
-      <option value="">12</option>
-      <option value="">13</option>
-      <option value="">14</option>
-      <option value="">15</option>
-      <option value="">16</option>
-      <option value="">17</option>
-      <option value="">18</option>
-      <option value="">19</option>
-      <option value="">20</option>
-      <option value="">21</option>
-      <option value="">22</option>
-      <option value="">23</option>
-      <option value="">24</option>
-      <option value="">25</option>
-      <option value="">26</option>
-      <option value="">27</option>
-      <option value="">28</option>
-      <option value="">29</option>
-      <option value="">30</option>
-      <option value="">31</option>
-    </select>
-
-    <label for="month">เดือน</label>
-    <select name="month" id="month">
-      <option value="">-- เลือกเดือน --</option>
-      <option value="มกราคม">มกราคม</option>
-      <option value="กุมภาพันธ์">กุมภาพันธ์</option>
-      <option value="มีนาคม">มีนาคม</option>
-      <option value="เมษายน">เมษายน</option>
-      <option value="พฤษภาคม">พฤษภาคม</option>
-      <option value="มิถุนายน">มิถุนายน</option>
-      <option value="กรกฎาคม">กรกฎาคม</option>
-      <option value="สิงหาคม">สิงหาคม</option>
-      <option value="กันยายน">กันยายน</option>
-      <option value="ตุลาคม">ตุลาคม</option>
-      <option value="พฤศจิกายน">พฤศจิกายน</option>
-      <option value="ธันวาคม">ธันวาคม</option>
-    </select>
+<label for="inspectionDate">📅 วันที่ตรวจสอบ:</label>
+<input type="date" id="inspectionDate" name="inspectionDate">
 
     <label for="methodSelect">วิธีการตรวจ + อุปกรณ์ที่ใช้</label>
-    <select name="methodSelect" id="methodSelect">
+    <select id="methodSelect" name="methodSelect">
       <option value="">--วิธีการตรวจ + อุปกรณ์ที่ใช้--</option>
       <option value="ตรวจเช็คทางกายภาพ + Infrared Thermometer">ตรวจเช็คทางกายภาพ + Infrared Thermometer</option>
       <option value="ตรวจเช็คทางกายภาพ">ตรวจเช็คทางกายภาพ</option>
       <option value="อื่นๆ">อื่นๆ</option>
     </select>
-    <input type="text" name="method" placeholder="ระบุเพิ่มเติม">
+
+    <input type="text" id="method" name="ระบุเพิ่มเติม">
 
     <label for="resultSelect">ผลการตรวจสายไฟ</label>
-    <select name="resultSelect" id="resultSelect">
+    <select id="resultSelect" name="resultSelect">
       <option value="">--เลือกผลการตรวจ--</option>
       <option value="สายปกติ">สายปกติ</option>
       <option value="สายผิดปกติ">สายผิดปกติ</option>
     </select>
-    <input type="text" name="result" placeholder="ระบุเพิ่มเติม">
+    <input type="text" id="result" name="ระบุเพิ่มเติม">
 
     <label for="wireTempSelect">อุณหภูมิสาย (°C)</label>
-    <select name="wireTempSelect" id="wireTempSelect">
+    <select id="wireTempSelect" name="wireTempSelect">
       <option value="">--เลือกอุณหภูมิ--</option>
       <option value="ปกติ">ปกติ</option>
       <option value="ร้อน">ร้อน</option>
       <option value="ร้อนมาก">ร้อนมาก</option>
       <option value="เย็น">เย็น</option>
     </select>
-    <input type="text" name="wire_temp" placeholder="ระบุเพิ่มเติม">
+    <input type="text" id="wire_temp" name="ระบุเพิ่มเติม">
 
     <label for="peripheralSelect">อุปกรณ์ต่อพ่วง,ปลั๊กไฟ</label>
     <select name="peripheralSelect" id="peripheralSelect">
@@ -196,23 +147,23 @@
       <option value="ไม่ได้มาตรฐาน">ไม่ได้มาตรฐาน</option>
       <option value="ควรเปลียน">ควรเปลียน</option>
     </select>
-    <input type="text" name="peripheral" placeholder="ระบุเพิ่มเติม">
+    <input type="text" id="peripheral" name="ระบุเพิ่มเติม">
 
     <label for="peripheral_temp">อุณหภูมิอุปกรณ์ต่อพ่วง(°C)</label>
-    <input type="text" name="peripheral_temp">
+    <input type="text" id="peripheral_temp">
 
     <label for="recommendation">คำแนะนำ</label>
-    <input type="text" name="recommendation">
+    <input type="text" id="recommendation">
 
     <label for="ups_result_select">ผลการตรวจ UPS</label>
-    <select name="ups_result_select" id="ups_result_select">
+    <select id="ups_result_select" name="ups_result_select">
       <option value="">--เลือก--</option>
       <option value="มี,ใช้งานได้">มี,ใช้งานได้</option>
       <option value="มี,เสีย">มี,เสีย</option>
       <option value="ไม่มี">ไม่มี</option>
       <option value="คำเเนะนำ,หมายเหตุ">คำเเนะนำ,หมายเหตุ</option>
     </select>
-    <input type="text" name="ups_result" placeholder="ระบุเพิ่มเติม">
+    <input type="text" id="ups_result" name="ระบุเพิ่มเติม">
 
     <label for="inspection_photos">รูปถ่ายการตรวจ:</label>
     <input type="file" name="inspection_photos[]" accept="image/*" multiple>
@@ -226,39 +177,54 @@
       <option value="ตรวจแล้ว">ตรวจแล้ว</option>
       <option value="ยังไม่มีการตรวจเช็ค">ยังไม่มีการตรวจเช็ค</option>
     </select>
-    <input type="text" name="status" placeholder="ระบุเพิ่มเติม">
+    <input type="text" id="status" name="ระบุเพิ่มเติม">
 
     <button type="submit">บันทึกข้อมูล</button>
   </form>
 
- <script>
-    document.getElementById('inspectionForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const data = {
-        location: document.getElementById('location').value,
-        day: document.getElementById('day').value,
-        date: document.getElementById('date').value,
-        month: document.getElementById('month').value,
-        methodSelect: document.getElementById('methodSelect').value,
-        method: document.querySelector('input[name="method"]').value,
-        resultSelect: document.getElementById('resultSelect').value,
-        result: document.querySelector('input[name="result"]').value,
-        wireTempSelect: document.getElementById('wireTempSelect').value,
-        wire_temp: document.querySelector('input[name="wire_temp"]').value,
-        peripheralSelect: document.getElementById('peripheralSelect').value,
-        peripheral: document.querySelector('input[name="peripheral"]').value,
-        peripheral_temp: document.querySelector('input[name="peripheral_temp"]').value,
-        recommendation: document.querySelector('input[name="recommendation"]').value,
-        ups_result_select: document.getElementById('ups_result_select').value,
-        ups_result: document.querySelector('input[name="ups_result"]').value,
-        status_select: document.getElementById('status_select').value,
-        status: document.querySelector('input[name="status"]').value,
-        timestamp: new Date().toISOString()
-      };
-      localStorage.setItem('inspectionData', JSON.stringify(data));
-      alert("บันทึกข้อมูลเรียบร้อยแล้ว!");
+ 
+<script>
+  document.getElementById('inspectionForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = document.getElementById('inspectionForm');
+    const inputs = form.querySelectorAll('input, select, textarea');
+    const data = {};
+
+    inputs.forEach(input => {
+      const name = input.name || input.id;
+      const value = input.value.trim();
+      if (name) data[name] = value;
     });
-  </script>
+
+    data.timestamp = new Date().toISOString();
+    localStorage.setItem('inspectionData', JSON.stringify(data));
+    alert("✅ บันทึกข้อมูลเรียบร้อยแล้ว!");
+  });
+
+  function exportFormData() {
+    const form = document.getElementById("inspectionForm");
+    const inputs = form.querySelectorAll("input, select, textarea");
+    let csvContent = "ตรวจโดย IT นายพิสิษฐ์ วงศ์อารยะกุล...............\n";
+
+    inputs.forEach(input => {
+      const label = form.querySelector(`label[for='${input.id}']`);
+      const fieldName = label ? label.innerText.trim() : input.name || input.id;
+      const value = input.value.trim();
+      csvContent += `"${fieldName}","${value}"\n`;
+    });
+
+    const timestamp = new Date().toISOString().split('T')[0];
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", `inspection_export_${timestamp}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+</script>
+
 </body>
 </html>
 
@@ -413,32 +379,52 @@
     loadData();
   </script>
 
- </select>
-    <button type="button" onclick="exportLocation()">Export ข้อมูล</button>
-  </form>
-
 <script>
-    function exportLocation() {
-      const location = document.getElementById("location").value;
-      if (!location) {
-        alert("กรุณาเลือกสถานที่ก่อน");
-        return;
-      }
+  function exportAllPageData() {
+    const allInputs = document.querySelectorAll('input, select, textarea');
+    let csvContent = "ตรวจโดย IT นายพิสิษฐ์ วงศ์อารยะกุล............... \n";
 
-      const timestamp = new Date().toISOString();
-      const csvContent = `"location,วันที่บันทึก\\n"${location}","${timestamp}"`;
+    allInputs.forEach(input => {
+      const label = document.querySelector(`label[for='${input.id}']`);
+      const fieldName = label ? label.innerText.trim() : input.name || input.id || "ไม่ทราบชื่อฟิลด์";
+      const value = input.value.trim();
+      csvContent += `"${fieldName}","${value}"\n`;
+    });
 
-      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.setAttribute("href", url);
-      link.setAttribute("download", "inspection_location.csv");
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-  </script>
+    const timestamp = new Date().toISOString();
+    const fileName = `inspection_export_${timestamp.split('T')[0]}.csv`;
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", fileName);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+</script>
+<button onclick="exportAllPageData()">📤 Export ข้อมูลทั้งหมดในหน้า</button>
+
+</body>
 <script>
+  document.getElementById('inspectionForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = document.getElementById('inspectionForm');
+    const inputs = form.querySelectorAll('input, select, textarea');
+    const data = {};
+
+    inputs.forEach(input => {
+      const name = input.name || input.id;
+      const value = input.value.trim();
+      if (name) data[name] = value;
+    });
+
+    data.timestamp = new Date().toISOString();
+    localStorage.setItem('inspectionData', JSON.stringify(data));
+    alert("✅ บันทึกข้อมูลเรียบร้อยแล้ว!");
+  });
+
   function exportFormData() {
     const form = document.getElementById("inspectionForm");
     const inputs = form.querySelectorAll("input, select, textarea");
@@ -451,47 +437,58 @@
       csvContent += `"${fieldName}","${value}"\n`;
     });
 
+    const timestamp = new Date().toISOString().split('T')[0];
     const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.setAttribute("href", url);
-    link.setAttribute("download", "inspection_data.csv");
+    link.setAttribute("download", `inspection_export_${timestamp}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   }
-</script>
 
+  async function submitInspection() {
+    const form = document.getElementById('inspectionForm');
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/submit-inspection', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+      if (result.ok) {
+        alert("✅ ส่งข้อมูลเรียบร้อยแล้ว!");
+      } else {
+        alert("❌ ส่งข้อมูลไม่สำเร็จ: " + result.error);
+      }
+    } catch (err) {
+      alert("❌ เกิดข้อผิดพลาดในการส่งข้อมูล");
+      console.error(err);
+    }
+  }
+  
+</script>
 <script>
-function saveInspectionData() {
-    const today = new Date();
-    const dateStr = today.toISOString().split('T')[0]; // YYYY-MM-DD
-    const fileName = `inspection_${dateStr}.json`;
+document.addEventListener("DOMContentLoaded", function () {
+  const saveButton = document.querySelector("button"); // ปรับให้ตรงกับปุ่มบันทึก
+  const statusDiv = document.getElementById("latestStatus");
 
-    const data = {
-        location: document.querySelector('[name="สถานที่"]').value,
-        day: document.querySelector('[name="วัน"]').value,
-        date: document.querySelector('[name="วันที่"]').value,
-        month: document.querySelector('[name="เดือน"]').value,
-        method: document.querySelector('[name="วิธีการตรวจ"]').value,
-        wireResult: document.querySelector('[name="ผลการตรวจสายไฟ"]').value,
-        wireTemp: document.querySelector('[name="อุณหภูมิสาย"]').value,
-        deviceQuality: document.querySelector('[name="อุปกรณ์ต่อพ่วง"]').value,
-        deviceTemp: document.querySelector('[name="อุณหภูมิอุปกรณ์"]').value,
-        upsStatus: document.querySelector('[name="UPS"]').value,
-        advice: document.querySelector('[name="คำแนะนำ"]').value,
-        photo: document.querySelector('[name="รูปถ่าย"]').value,
-        speedtest: document.querySelector('[name="Speedtest"]').value,
-        status: document.querySelector('[name="สถานะการตรวจ"]').value
-    };
+  if (saveButton && statusDiv) {
+    saveButton.addEventListener("click", function () {
+      // ดึงข้อมูลจากฟอร์ม (ตัวอย่าง: สถานที่, วันที่, ผลตรวจ)
+      const location = document.querySelector("select[name='location']")?.value || "ไม่ระบุสถานที่";
+      const date = document.querySelector("input[name='date']")?.value || "ไม่ระบุวันที่";
+      const result = document.querySelector("select[name='result']")?.value || "ไม่ระบุผลตรวจ";
 
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = fileName;
-    link.click(); 
-}
+      // อัปเดตสถานะล่าสุด
+      statusDiv.textContent = `สถานะล่าสุด: บันทึกแล้ว - สถานที่ ${location}, วันที่ ${date}, ผลตรวจ ${result}`;
+    });
+  }
+});
 </script>
-<button onclick="saveInspectionData()">บันทึกข้อมูล</button> 
+
 </body>
 </html>
