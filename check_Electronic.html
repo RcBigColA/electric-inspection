@@ -231,7 +231,7 @@
     <button type="submit">บันทึกข้อมูล</button>
   </form>
 
-  <script>
+ <script>
     document.getElementById('inspectionForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const data = {
@@ -413,5 +413,85 @@
     loadData();
   </script>
 
+ </select>
+    <button type="button" onclick="exportLocation()">Export ข้อมูล</button>
+  </form>
+
+<script>
+    function exportLocation() {
+      const location = document.getElementById("location").value;
+      if (!location) {
+        alert("กรุณาเลือกสถานที่ก่อน");
+        return;
+      }
+
+      const timestamp = new Date().toISOString();
+      const csvContent = `"location,วันที่บันทึก\\n"${location}","${timestamp}"`;
+
+      const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", "inspection_location.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+<script>
+  function exportFormData() {
+    const form = document.getElementById("inspectionForm");
+    const inputs = form.querySelectorAll("input, select, textarea");
+    let csvContent = "ชื่อฟิลด์,ค่า\n";
+
+    inputs.forEach(input => {
+      const label = form.querySelector(`label[for='${input.id}']`);
+      const fieldName = label ? label.innerText.trim() : input.name || input.id;
+      const value = input.value.trim();
+      csvContent += `"${fieldName}","${value}"\n`;
+    });
+
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", "inspection_data.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+</script>
+
+<script>
+function saveInspectionData() {
+    const today = new Date();
+    const dateStr = today.toISOString().split('T')[0]; // YYYY-MM-DD
+    const fileName = `inspection_${dateStr}.json`;
+
+    const data = {
+        location: document.querySelector('[name="สถานที่"]').value,
+        day: document.querySelector('[name="วัน"]').value,
+        date: document.querySelector('[name="วันที่"]').value,
+        month: document.querySelector('[name="เดือน"]').value,
+        method: document.querySelector('[name="วิธีการตรวจ"]').value,
+        wireResult: document.querySelector('[name="ผลการตรวจสายไฟ"]').value,
+        wireTemp: document.querySelector('[name="อุณหภูมิสาย"]').value,
+        deviceQuality: document.querySelector('[name="อุปกรณ์ต่อพ่วง"]').value,
+        deviceTemp: document.querySelector('[name="อุณหภูมิอุปกรณ์"]').value,
+        upsStatus: document.querySelector('[name="UPS"]').value,
+        advice: document.querySelector('[name="คำแนะนำ"]').value,
+        photo: document.querySelector('[name="รูปถ่าย"]').value,
+        speedtest: document.querySelector('[name="Speedtest"]').value,
+        status: document.querySelector('[name="สถานะการตรวจ"]').value
+    };
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = fileName;
+    link.click(); 
+}
+</script>
+<button onclick="saveInspectionData()">บันทึกข้อมูล</button> 
 </body>
 </html>
